@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    color: green;
+    background-color: #111;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 24px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+p {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
+#site-header {
+    background-color: rgb(165, 244, 247);
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+}
+
+#site-footer {
+    background-color: #fff;
+    color: rgb(70, 68, 68);
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.logo {
+    max-width: 600px;
+    height: 400px;
+    display: inline-block;
+    margin: 80px;
+}
+
+nav ul li a {
+    color: rgb(99, 97, 97);
+    font-weight: 300;
+    padding: 8px 13px;
+    transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgb(17, 20, 20);
+    border-radius: 3px;
+}
+
+.articles > .article-card,
+.articles > .article-item {
+    margin-bottom: 18px;
+}
+
+input[type="email"] {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    width: 110%;
+    max-width: 250px;
+}
+
+.hero {
+    background: turquoise;
+    padding: 40px;
+    text-align: center;
+    color: #111;
+}
+
+header nav {
+    background-color: transparent;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: stretch;
+    align-items: start;
+}
+
+.article-card,
+.article-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.article-card:hover,
+.article-item:hover {
+    transform: translateY(-5px);
+}
+
+.article-card img,
+.article-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    display: block;
+    margin: auto;
+}
+
+.article-card img:hover,
+.article-item img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .articles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .articles {
+    grid-template-columns: 1fr;
+  }
+}
+
+.newsletter {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter button {
+    background-color: turquoise;
+    color: #111;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: teal;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.intro {
+    font-style: italic;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.article-card h3::before,
+.article-item h3::before {
+    content: "★ ";
+    color: turquoise;
+}
+
+.article-card h3,
+.article-item h3 {
+    transition: color 0.3s ease;
+}
+
+.article-card:hover h3,
+.article-item:hover h3 {
+    color: teal;
+}
+
+.newsletter h2 {
+    margin-bottom: 15px;
+    display: inline-block;
+    position: relative;
+}
+
+.newsletter h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: turquoise;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+}
